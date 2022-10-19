@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: apptest-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: apptest
+  ports:
+  - port: 80
+    targetPort: 80

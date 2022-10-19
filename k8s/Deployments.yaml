@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apptest
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: apptest
+  template:
+    metadata:
+      labels:
+        app: apptest
+    spec:
+      containers:
+      - name: apptest
+        image: nginx
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
