@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: apptest
-        image: nginx
+        image: nginx:1.22.1
         resources:
           limits:
             memory: "128Mi"
